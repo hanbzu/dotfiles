@@ -27,7 +27,7 @@ autoload compinit
 compinit
 
 # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
+PATH=$HOME/.rvm/bin:$PATH
 
 # node.js and nvm
 # http://nodejs.org/api/repl.html#repl_repl
