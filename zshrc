@@ -26,6 +26,9 @@ setopt menucomplete
 autoload compinit
 compinit
 
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+
 # node.js and nvm
 # http://nodejs.org/api/repl.html#repl_repl
 alias node="env NODE_NO_READLINE=1 rlwrap node"
@@ -36,9 +39,6 @@ if [ -s ~/.nvm/nvm.sh ]; then
     source ~/.nvm/nvm.sh
     nvm use v0.10.12 &> /dev/null # silence nvm use; needed for rsync
 fi
-
-# Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
 
 # Add Heroku to the path
 PATH=$PATH:/usr/local/heroku:/usr/local/heroku/bin
