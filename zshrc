@@ -17,7 +17,7 @@ PROMPT='
 %~
 ${smiley}  %{$reset_color%}'
 
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/setup/git-cwd-info)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/dotfiles/git-cwd-info)%{$reset_color%}'
 
 # Show completion on first TAB
 setopt menucomplete
