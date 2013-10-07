@@ -16,3 +16,8 @@ if [ -d .emacs.d/ ]; then
 	mv .emacs.d .emacs.d~
 fi
 ln -s ~/dotfiles/emacs.d ~/.emacs.d
+
+# No .profile
+if [ -e ~/.profile ]; then
+	mv ~/.profile ~/.profile~
+fi
