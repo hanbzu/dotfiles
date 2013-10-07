@@ -48,7 +48,7 @@ fi
 
 # NVM added 27.07.2012
 # following http://ghosttx.com/2012/04/nvm-cheat-sheet-node-version-manager/
-. ~/nvm/nvm.sh
+. ~/.nvm/nvm.sh
 
 # These commands are custom for my current installation
 if [[ $USER = "hibai" || $USER = "eneibai" ]]; then
