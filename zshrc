@@ -17,10 +17,7 @@ PROMPT='
 %~
 ${smiley}  %{$reset_color%}'
 
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/bin/git-cwd-info)%{$reset_color%}'
-
-# Replace the above with this if you use rbenv
-# RPROMPT='%{$fg[white]%} $(~/.rbenv/bin/rbenv version-name)$(~/bin/git-cwd-info.rb)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/setup/git-cwd-info)%{$reset_color%}'
 
 # Show completion on first TAB
 setopt menucomplete
@@ -29,8 +26,22 @@ setopt menucomplete
 autoload compinit
 compinit
 
+# node.js and nvm
+# http://nodejs.org/api/repl.html#repl_repl
+alias node="env NODE_NO_READLINE=1 rlwrap node"
+alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
+export NODE_DISABLE_COLORS=1
+if [ -s ~/.nvm/nvm.sh ]; then
+    NVM_DIR=~/.nvm
+    source ~/.nvm/nvm.sh
+    nvm use v0.10.12 &> /dev/null # silence nvm use; needed for rsync
+fi
+
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
+
+# Add Heroku to the path
+PATH=$PATH:/usr/local/heroku:/usr/local/heroku/bin
 
 # Aliases
 alias ls='ls --color=auto'
@@ -39,6 +50,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ll="ls -l"
 alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
+
 
 # These commands are custom for my current installation
 if [[ $USER = "hibai" || $USER = "eneibai" ]]; then
