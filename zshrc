@@ -50,14 +50,18 @@ fi
 # following http://ghosttx.com/2012/04/nvm-cheat-sheet-node-version-manager/
 . ~/.nvm/nvm.sh
 
+# Scala SBT: Add bin to PATH for Scala binaries
+if [ -d ~/tools/sbt/ ]; then
+  PATH=$PATH:~/tools/sbt/bin
+fi
+
+# Add Play path for using the Play framework
+if [ -d ~/tools/play-2.2.0/ ]; then
+  PATH=$PATH:~/tools/play-2.2.0
+fi
+
 # These commands are custom for my current installation
 if [[ $USER = "hibai" || $USER = "eneibai" ]]; then
-
-  # Add SBT bin to PATH for Scala binaries
-  PATH=$PATH:$HOME/hibai/ikasten/functional_programming_scala/sbt/bin
-
-  # Add Play path for using the Play framework
-  PATH=$PATH:$HOME/hibai/tools/play-2.2.0
 
   # Special aliases
   alias tilemill='nvm run 0.8 /usr/share/tilemill/index.js'
