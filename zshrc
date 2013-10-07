@@ -24,6 +24,21 @@ compinit
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/heroku:/usr/local/heroku/bin
 
+# Scala SBT: Add bin to PATH for Scala binaries
+if [ -d ~/tools/sbt/ ]; then
+  PATH=$PATH:~/tools/sbt/bin
+fi
+
+# Add Play path for using the Play framework
+if [ -d ~/tools/play-2.2.0/ ]; then
+  PATH=$PATH:~/tools/play-2.2.0
+fi
+
+# Add SML path if present
+if [ -d ~/tools/sml/ ]; then
+  PATH=$PATH:~/tools/sml/bin
+fi
+
 # Aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -62,16 +77,6 @@ fi
 # NVM added 27.07.2012
 # following http://ghosttx.com/2012/04/nvm-cheat-sheet-node-version-manager/
 . ~/.nvm/nvm.sh
-
-# Scala SBT: Add bin to PATH for Scala binaries
-if [ -d ~/tools/sbt/ ]; then
-  PATH=$PATH:~/tools/sbt/bin
-fi
-
-# Add Play path for using the Play framework
-if [ -d ~/tools/play-2.2.0/ ]; then
-  PATH=$PATH:~/tools/play-2.2.0
-fi
 
 # These commands are custom for my current installation
 if [[ $USER = "hibai" || $USER = "eneibai" ]]; then
