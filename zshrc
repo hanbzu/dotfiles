@@ -29,8 +29,21 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias ll="ls -l"
 alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
+alias ll="ls -alrtF --color"
+alias la="ls -A"
+alias l="ls -CF"
+alias dir='ls --color=auto --format=vertical'
+alias vdir='ls --color=auto --format=long'
+alias m='less'
+alias ..='cd ..'
+alias ...='cd ..;cd ..'
+alias md='mkdir'
+alias cl='clear'
+alias du='du -ch --max-depth=1'
+alias treeacl='tree -A -C -L 2'
+alias em='emacs -nw'     # No X11 windows
+alias eqq='emacs -nw -Q' # No config and no X11
 
 # rvm: load rvm into a shell session *as a function*
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
