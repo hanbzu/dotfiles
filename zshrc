@@ -24,20 +24,17 @@ compinit
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/heroku:/usr/local/heroku/bin
 
+# Optional path modifications (check before)
 # Scala SBT: Add bin to PATH for Scala binaries
-if [ -d ~/tools/sbt/ ]; then
-  PATH=$PATH:~/tools/sbt/bin
-fi
-
+[[ -d ~/tools/sbt/ ]]; PATH=$PATH:~/tools/sbt/bin
 # Add Play path for using the Play framework
-if [ -d ~/tools/play-2.2.0/ ]; then
-  PATH=$PATH:~/tools/play-2.2.0
-fi
-
+[[ -d ~/tools/play-2.2.0/ ]]; PATH=$PATH:~/tools/play-2.2.0
 # Add SML path if present
-if [ -d ~/tools/sml/ ]; then
-  PATH=$PATH:~/tools/sml/bin
-fi
+[[ -d ~/tools/sml/ ]]; PATH=$PATH:~/tools/sml/bin
+# Add XDS path if present
+[[ -d ~/tools/xds/ ]]; PATH=$PATH:~/tools/xds
+# Add Coot pre-release path if present (2013-10)
+[[ -d ~/tools/coot/coot-pre-release-gtk2-python/bin ]]; PATH=$PATH:~/tools/coot/coot-pre-release-gtk2-python/bin
 
 # Aliases
 alias ls='ls --color=auto'
