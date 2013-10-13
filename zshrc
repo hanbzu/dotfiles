@@ -80,6 +80,5 @@ if [[ $USER = "hibai" || $USER = "eneibai" ]]; then
 
   # Special aliases
   alias tilemill='nvm run 0.8 /usr/share/tilemill/index.js'
-  alias sublime='/opt/sublime_text/sublime_text'
   alias pomodoro='echo "aplay ~/hibai/bell.wav" | at now + 25 min'
 fi
