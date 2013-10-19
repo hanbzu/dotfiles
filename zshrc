@@ -36,8 +36,8 @@ PATH=$PATH:~/bin
 [[ -d ~/bin/xds/ ]]; PATH=$PATH:~/bin/xds
 # Add Coot pre-release path if present (2013-10)
 [[ -d ~/bin/coot-pre-release-gtk2-python/bin ]]; PATH=$PATH:~/bin/coot-pre-release-gtk2-python/bin
-# Add Phenix path if present (2013-10)
-[[ -d ~/bin/phenix-1.8.4-1496 ]]; PATH=$PATH:~/bin/phenix-1.8.4-1496
+# Define necessary env variables for Phenix, if present (2013-10)
+[[ -d ~/bin/phenix-1.8.4-1496 ]]; source ~/bin/phenix-1.8.4-1496/phenix_env.sh
 
 # Aliases
 alias ls='ls --color=auto'
