@@ -85,3 +85,13 @@ if [[ $USER = "hibai" || $USER = "eneibai" ]]; then
   alias tilemill='nvm run 0.8 /usr/share/tilemill/index.js'
   alias pomodoro='echo "aplay ~/hibai/bell.wav" | at now + 25 min'
 fi
+
+# z: Easy go-to app
+. ~/bin/z/z.sh
+
+# Server here
+function server() {
+	local port="${1:-8000}"
+	xdg-open "http://localhost:${port}/"
+	python -m SimpleHTTPServer "$port"
+}
