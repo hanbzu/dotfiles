@@ -26,12 +26,6 @@ PATH=$PATH:/usr/local/heroku:/usr/local/heroku/bin
 PATH=$PATH:~/bin
 
 # Optional path modifications (check before)
-# Scala SBT: Add bin to PATH for Scala binaries
-[[ -d ~/bin/sbt/ ]]; PATH=$PATH:~/bin/sbt/bin
-# Add Play path for using the Play framework
-[[ -d ~/bin/play-2.2.0/ ]]; PATH=$PATH:~/bin/play-2.2.0
-# Add SML path if present
-[[ -d ~/bin/sml/ ]]; PATH=$PATH:~/bin/sml/bin
 # Add XDS path if present
 [[ -d ~/bin/xds/ ]]; PATH=$PATH:~/bin/xds
 # Add Coot pre-release path if present (2013-10)
@@ -83,11 +77,10 @@ if [[ $USER = "hibai" || $USER = "eneibai" ]]; then
 
   # Special aliases
   alias tilemill='nvm run 0.8 /usr/share/tilemill/index.js'
-  alias pomodoro='echo "aplay ~/hibai/bell.wav" | at now + 25 min'
 fi
 
 # z: Easy go-to app
-. ~/bin/z/z.sh
+. /opt/z/z.sh
 
 # Server here
 function server() {
