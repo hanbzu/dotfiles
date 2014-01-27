@@ -33,6 +33,9 @@ PATH=$PATH:~/bin
 # Define necessary env variables for Phenix, if present (2013-10)
 [[ -d ~/bin/phenix-1.8.4-1496 ]]; source ~/bin/phenix-1.8.4-1496/phenix_env.sh
 
+# Optional env modifications for CCP4
+[[ -d ~/bin/ccp4-6.4.0/ ]]; source ~/bin/ccp4-6.4.0/bin/ccp4.setup-sh
+
 # Aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
