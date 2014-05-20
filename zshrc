@@ -27,14 +27,30 @@ PATH=$PATH:~/bin
 
 # Optional path modifications (check before)
 # Add XDS path if present
-[[ -d ~/bin/xds/ ]]; PATH=$PATH:~/bin/xds
+if [[ -d ~/bin/xds/ ]]
+then
+  echo "XDS now available from command line."
+  PATH=$PATH:~/bin/xds
+fi
 # Add Coot pre-release path if present (2013-10)
-[[ -d ~/bin/coot-pre-release-gtk2-python/bin ]]; PATH=$PATH:~/bin/coot-pre-release-gtk2-python/bin
+if [[ -d ~/bin/coot-pre-release-gtk2-python/bin ]]
+then
+  echo "Coot pre-release now available from command line."
+  PATH=$PATH:~/bin/coot-pre-release-gtk2-python/bin
+fi
 # Define necessary env variables for Phenix, if present (2013-10)
-[[ -d ~/bin/phenix-1.8.4-1496 ]]; source ~/bin/phenix-1.8.4-1496/phenix_env.sh
+if [[ -d ~/bin/phenix-1.8.4-1496 ]]
+then
+  echo "Phenix now available from command line."
+  source ~/bin/phenix-1.8.4-1496/phenix_env.sh
+fi
 
 # Optional env modifications for CCP4
-[[ -d ~/bin/ccp4-6.4.0/ ]]; source ~/bin/ccp4-6.4.0/bin/ccp4.setup-sh
+if [[ -d ~/bin/ccp4-6.4.0/ ]]
+then
+  echo "CCP4 tools now available from command line."
+  source ~/bin/ccp4-6.4.0/bin/ccp4.setup-sh
+fi
 
 # Aliases
 alias ls='ls --color=auto'
